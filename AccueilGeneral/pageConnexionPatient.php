@@ -1,3 +1,7 @@
+
+
+
+
 <!DOCTYPE html>
 <html lang="en" >
 <head>
@@ -10,7 +14,7 @@
 <body>
 <div class="container">
     <h1>Please Login</h1>
-    <form>
+    <form action="" method="post">
         <div class="form-control">
             <input type="text" required placeholder="Nom d'utilisateur">
 

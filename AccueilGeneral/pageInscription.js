@@ -35,7 +35,7 @@ function submitForm() {
 
 function redirectToHomePage() {
     
-    window.location.href = 'pageAcceuil.html'; 
+    window.location.href = 'pageAcceuil.php';
 }
 
 let $ = jQuery.noConflict();

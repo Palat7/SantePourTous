@@ -21,8 +21,8 @@
   <p>Choississez un type de compte</p>
 
   <div class="user-type-container">
-    <a href="pageInscriptionPatient.html" class="user-type">Patient </a>
-    <a href="pageInscriptionMedecin.html" class="user-type">Medecin </a>
+    <a href="pageInscriptionPatient.php" class="user-type">Patient </a>
+    <a href="pageInscriptionMedecin.php" class="user-type">Medecin </a>
     <a href="#" class="user-type">Clinique</a>
 
   </div>

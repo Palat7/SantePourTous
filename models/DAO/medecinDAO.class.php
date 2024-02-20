@@ -12,7 +12,7 @@ if(defined('DOSSIER_BASE_INCLUDE')){
 class medecinDAO implements DAO
 {
 
-    public static function chercher($cles)
+    public static function chercher($nom)
     {
         try {
             $connexion = ConnexionBD::getInstance();
@@ -25,7 +25,7 @@ class medecinDAO implements DAO
         $requete = $connexion->prepare("SELECT * FROM medecin WHERE nomMedecin = ?");
 
 
-        $requete->execute(array($cles));
+        $requete->execute(array($nom));
 
         if ($requete->rowCount() != 0) {
             $enr = $requete->fetch();

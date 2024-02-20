@@ -21,6 +21,8 @@ class Medecin{
      * @param $numProfession
      * @param $typeFacturation
      */
+
+
     public function __construct($nomMedecin, $prenomMedecin, $specMedecin, $courrielMedecin, $numProfession, $typeFacturation)
     {
         $this->nomMedecin = $nomMedecin;

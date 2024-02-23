@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>creation de compte Clinique</title>
-    <link rel="stylesheet" href="PageInscriptionClinique.css">
+    <link rel="stylesheet" href="assets/css/PageInscriptionClinique.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -117,7 +117,9 @@
         <div class="col-md-8">
 
             <form id="signupForm">
-
+                <div class="text-center">
+                    <a href="?action=pageAcceuil" class="h1">Sant&eacute;PourTous</a>
+                </div>
                 <div class="step active" id="step1">
 
                     <h4 class="text-center mb-4">Veuillez renseigner les informations de votre clinique</h4>
@@ -175,7 +177,7 @@
 
                         <div>
                             <p class="paraDejaUnCompte">Déjà un compte? <a
-                                    href="connexionClinique.html">Connectez-vous</a></p>
+                                    href="?action=connexionClinique">Connectez-vous</a></p>
                         </div>
 
                         <button type="submit" class="btn btn-primary">Suivant</button>
@@ -256,7 +258,7 @@
 <!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>-->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="PageInscriptionClinique.js"></script>
+<script src="assets/js/PageInscriptionClinique.js"></script>
 
 </body>
 </html>

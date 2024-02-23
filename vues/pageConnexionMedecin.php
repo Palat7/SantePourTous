@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>document</title>
-    <link rel="stylesheet" href="../CSS/pageConnexion.css">
+    <link rel="stylesheet" href="assets/css/pageConnexion.css">
 
     <style>
         body{
@@ -23,7 +23,10 @@
 
 <body>
 <div class="container">
-    <h1>Please Login</h1>
+    <div class="text-center">
+        <h1><a href="?action=pageAcceuil">Sant&eacute;PourTous</a></h1>
+    </div>
+    <h2>Veuillez vous connecter</h2>
     <form>
         <div class="form-control">
             <input type="text" required placeholder="Nom d'utilisateur">
@@ -33,7 +36,7 @@
 
         </div>
         <button class="btn">Connexion</button>
-        <p class="text">Don't have an account? <a style="color: royalblue" href="creationCompteMedecin.html">Register</a> </p>
+        <p class="text">Pas de compte? <a style="color: royalblue" href="?action=pageInscriptionMedecin">S'inscrire</a> </p>
     </form>
 </div>
 </body>

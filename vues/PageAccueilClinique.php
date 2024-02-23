@@ -33,7 +33,7 @@
     <div class="container-fluid">
 
         <a class="navbar-brand fw-bold" href="#">
-            <img src="../Logo/Logo4.png" alt="SantéPourTous Logo"> </a>
+            <img src="../../Logo/Logo4.png" alt="SantéPourTous Logo"> </a>
         <a class="navbar-brand fw-bold textLogo me-5" href="#">SantéPourTous</a>
 
         <!-- Déterminer nécessité de ce bouton -->

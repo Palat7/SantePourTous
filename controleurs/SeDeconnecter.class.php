@@ -23,19 +23,21 @@
 			if ($this->acteur=="visiteur") {
 				array_push ($this->messagesErreur,"Vous êtes déjà déconnécté.");
                 //return "pageAccueil";
-                return "pageSeConnecter";
+              // return "pageSeConnecter";
+               return "pageAcceuil";
 			}
 
             elseif (ISSET($_POST['deconnexion'])) {
 				$this->acteur="visiteur";
 				unset($_SESSION['utilisateurConnecte']);
 				//return "pageAccueil";
-                return "pageSeConnecter";
+               // return "pageSeConnecter";
+                return "pageAcceuil";
 
 			}
 
             else {
-				return "pageSeDeconnecter";
+				return "pageAccueilClinique1";
                 //return "pageAccueil";
 			}
 		}

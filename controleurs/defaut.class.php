@@ -23,7 +23,12 @@
 			//----------------------------- INTERACTION BD (pas besoin ici) -------------------------------			
 			//----------------------------- RETOURNER LE NOM DE LA VUE À APPELER -----
 			//return "pageAccueilClinique1";
-            return "pageSeConnecter";
+
+            /*Modifie le 2024-02-23*/
+          //  return "pageSeConnecter";
+
+            return "pageAcceuil";
+
 		}
 
 

@@ -9,7 +9,7 @@
 include_once(DOSSIER_BASE_INCLUDE . "controleurs/controleur.abstract.class.php");
 include_once(DOSSIER_BASE_INCLUDE . "modele/DAO/utilisateurDAO.class.php");
 
-class SeConnecter extends Controleur
+class SeConnecterClinique extends Controleur
 {
 
     // ******************* Constructeur vide
@@ -32,10 +32,10 @@ class SeConnecter extends Controleur
             $unUtilisateur = UtilisateurDAO::chercher($_POST['nom_utilisateur']);
             if ($unUtilisateur == null) {
                 array_push($this->messagesErreur, "Cet utilisateur n'existe pas.");
-                return "pageSeConnecter";
+                return "pageSeConnecterClinique";
             } elseif (!$unUtilisateur->verifierMotPasse($_POST['mot_passe'])) {
                 array_push($this->messagesErreur, "Le mot de passe est incorrect.");
-                return "pageSeConnecter";
+                return "pageSeConnecterClinique";
             } else {
 
                 $this->acteur = "utilisateur";
@@ -46,7 +46,7 @@ class SeConnecter extends Controleur
                 return "pageAccueilClinique1";
             }
         } else {
-            return "pageSeConnecter";
+            return "pageSeConnecterClinique";
           //  return "pageAccueilClinique1";
 
         }

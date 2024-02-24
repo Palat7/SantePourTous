@@ -6,6 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
+    <link rel="stylesheet" href="<?php echo DOSSIER_BASE_LIENS; ?>CSS/styleRetouche.css"/>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -19,20 +21,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 
 
-
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Leckerli One">
 
-    <!--
-    <link rel="stylesheet" href="../CSS/styleRetouche.css">
 
--->
-    <link rel="stylesheet" href="<?php echo DOSSIER_BASE_LIENS;?>../css/styleRetouche.css" />
-
-    <!--
-    <link rel="stylesheet" href="<?php echo DOSSIER_BASE_LIENS;?>CSS/styleRetouche.css"/>
--->
     <title>Accueil Clinique</title>
 </head>
+
 
 <body>
 <!-- Barre de menu -->
@@ -41,64 +35,80 @@
     <div class="container-fluid">
 
         <a class="navbar-brand fw-bold" href="#">
-            <img src="../Logo/Logo4.png" alt="SantéPourTous Logo"> </a>
-        <a class="navbar-brand fw-bold textLogo me-5" href="#">SantéPourTous</a>
+            <!-- <img src="../Logo/Logo4.png" alt="SantéPourTous Logo"> </a>-->
+            <!-- <img src="Logo4.png" alt="SantéPourTous Logo"> -->
 
-        <!-- Déterminer nécessité de ce bouton -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <a class="navbar-brand fw-bold textLogo me-5" href="#">SantéPourTous</a>
 
-        </button>
+            <!-- Déterminer nécessité de ce bouton -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
 
-
-        <div class="collapse navbar-collapse " id="navbarNavDropdown">
-
-            <!--ms-auto ajouté pour mieux répartir les éléments le long de la barre de navigation-->
-            <ul class="navbar-nav ms-auto">
+            </button>
 
 
+            <div class="collapse navbar-collapse " id="navbarNavDropdown">
 
-                <!--
-                <li class="nav-item me-2 ">
-
-                    <a class="nav-link active" aria-current="page" href="index.html">Accueil</a>
-                </li>
--->
+                <!--ms-auto ajouté pour mieux répartir les éléments le long de la barre de navigation-->
+                <ul class="navbar-nav ms-auto">
 
 
-                <!--me-5 inclus pour ajouter de l'espace à droite de l'élément-->
-                <li class="nav-item me-5">
-                    <a class="nav-link " href="" role="button"
-                       aria-expanded="false"> Liste des services
-                    </a>
+                    <!--
+                    <li class="nav-item me-2 ">
 
-                </li>
-
-                <!--me-5 inclus pour ajouter de l'espace à droite de l'élément-->
-                <li class="nav-item me-5">
-
-                    <a class="nav-link " href="ListeMedecin.html">Liste des médecins</a>
-                </li>
+                        <a class="nav-link active" aria-current="page" href="index.html">Accueil</a>
+                    </li>
+    -->
 
 
-                <li class="nav-item">
-                    <a class="nav-link " href="ListePatientClinique.html">Liste des patients</a>
-                </li>
-            </ul>
+                    <!--me-5 inclus pour ajouter de l'espace à droite de l'élément-->
+                    <li class="nav-item me-5">
+                        <a class="nav-link " href="" role="button"
+                           aria-expanded="false"> Liste des services
+                        </a>
 
-            <!--Classe ms-auto ajoutée ici. Elle place l'élément à droite dans une disposition de langue qui va de gauche à droite -->
-            <ul class="navbar-nav ml-auto ms-auto ">
-                <li class="nav-item ">
+                    </li>
 
-                    <button class="btn btn-primary ms-5 btn-lg" type="submit">Deconnexion</button>
-                </li>
+                    <!--me-5 inclus pour ajouter de l'espace à droite de l'élément-->
+                    <li class="nav-item me-5">
 
-
-            </ul>
+                        <a class="nav-link " href="ListeMedecin.html">Liste des médecins</a>
 
 
-        </div>
+                        
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link " href="ListePatientClinique.html">Liste des patients</a>
+                    </li>
+                </ul>
+
+                <!--Classe ms-auto ajoutée ici. Elle place l'élément à droite dans une disposition de langue qui va de gauche à droite -->
+                <ul class="navbar-nav ml-auto ms-auto ">
+                    <li class="nav-item ">
+
+
+                        <form method="post" action="?action=seDeconnecter">
+
+
+                            <button class="btn btn-primary ms-5 btn-lg" name="deconnexion" type="submit">
+
+                                Deconnexion
+                            </button>
+
+
+                        </form>
+
+
+                    </li>
+
+
+                </ul>
+
+
+            </div>
     </div>
 
 
@@ -124,7 +134,8 @@
 
                     <button class="nav-link  text-start text-white  border" id="v-pills-profile-tab"
                             data-bs-toggle="pill"
-                            data-bs-target="#formulaireProfilClinique" type="button" role="tab" aria-controls="v-pills-profile"
+                            data-bs-target="#formulaireProfilClinique" type="button" role="tab"
+                            aria-controls="v-pills-profile"
                             aria-selected="true"><i class="fa fa-info-circle me-2"></i> Infos sur la clinique
                     </button>
 
@@ -201,15 +212,14 @@
 
 
                                     <div class="col-md-7">
-                                        <label for="validationCustom04" class="form-label fw-bold">Nom de la ville </label>
+                                        <label for="validationCustom04" class="form-label fw-bold">Nom de la
+                                            ville </label>
                                         <input type="text" class="form-control" id="validationCustom04"
                                                value="Ville quelconque" required>
                                         <div class="valid-feedback">
                                             Bon!
                                         </div>
                                     </div>
-
-
 
 
                                     <div class="col-md-7">
@@ -222,7 +232,8 @@
                                     </div>
                                     <div class="md-form md-outline input-with-post-icon datepicker col-md-7">
                                         <label for="validationCustom06" class="form-label">Numéro de téléphone</label>
-                                        <input type="text" id="example" id="validationCustom06" class="form-control" value="819-345-6363">
+                                        <input type="text" id="example" id="validationCustom06" class="form-control"
+                                               value="819-345-6363">
 
                                     </div>
 

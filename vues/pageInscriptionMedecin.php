@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>creation de compte</title>
-  <link rel="stylesheet" href="assets/css/PageInscription.css">
+  <link rel="stylesheet" href="../CSS/PageInscription.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
@@ -19,14 +19,11 @@
 <div class="container mt-5 container-stylish" style="width: 630px;">
   <div class="row justify-content-center">
     <div class="col-md-8">
-
       <form id="signupForm"  name="signupForm1" novalidate>
-          <div class="text-center">
-              <a href="?action=pageAcceuil" class="h1">Sant&eacute;PourTous</a>
-          </div>
-        <div class="step active" id="step1">
 
-          <h4 style="text-align: center;">Docteur, créer votre compte</h4>
+        <div class="step active" id="step1">
+          <h1 style="text-align: center;">SIGN UP</h1>
+          <h4 style="text-align: center;">Create your doctor's account</h4>
           <div class="form-group">
             <label for="prenom">Nom et Prenom</label>
             <div class="row">
@@ -40,11 +37,11 @@
           </div>
           <div class="form-group">
             <label for="profession">Profession</label>
-            <input type="text" class="form-control" id="profession" required>
+            <input type="text" class="form-control" id="Profession" required>
           </div>
           <div class="form-group">
-            <label for="numprof">Numero de professionel</label>
-            <input type="text" class="form-control" id="numprof" required>
+            <label for="numprof">Numero de prefessionel</label>
+            <input type="text" class="form-control" id="numProf" required>
           </div>
           <div class="form-group">
             <label style="font-size: 12px;">Mode de facturation</label>
@@ -62,7 +59,7 @@
             <input type="text" class="form-control" id="numTel" name="numTelMedecin" required>
           </div>
           <div class="form-group">
-            <label for="email">Courriel</label>
+            <label for="email">E-mail</label>
             <input type="text" class="form-control" id="email" name="emailMedecin" required>
           </div>
           <div class="form-group">
@@ -77,23 +74,23 @@
           </div>
 
           <div>
-            <p style="text-align: right;">Déja inscrit? <a href="?action=pageConnexionMedecin">Se connecter</a></p>
+            <p style="text-align: right;">Already have an account? <a href="connexionMedecin.html">Se connecter</a></p>
           </div>
           <button type="button" class="btn btn-primary" onclick="nextStep(1)">Suivant</button>
         </div>
 
         <div class="step" id="step2">
-          <h2>Informations</h2>
+          <h2>Credidentials</h2>
           <div class="form-group">
-            <label for="email">Courriel</label>
+            <label for="email">Email</label>
             <input type="email" class="form-control" id="email2" required>
           </div>
           <div class="form-group">
-            <label for="password">Mot de passe</label>
+            <label for="password">Password</label>
             <input type="password" class="form-control" id="password" required>
           </div>
           <div class="form-group">
-            <label for="password">Comfirmer votre mot de passe</label>
+            <label for="password">Comfirm password</label>
             <input type="password" class="form-control" id="password2" required>
           </div>
           <button type="button" class="btn btn-secondary" onclick="prevStep(2)">Retour</button>
@@ -157,7 +154,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
-<script src="assets/js/pageInscriptionMedecin.js"> </script>
+<script src="../js/pageInscriptionMedecin.js"> </script>
 
 
 

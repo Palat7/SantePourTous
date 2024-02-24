@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>creation de compte</title>
-  <link rel="stylesheet" href="assets/css/PageInscription.css">
+  <link rel="stylesheet" href="../CSS/PageInscription.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
 </head>
@@ -14,9 +14,7 @@
   <div class="row justify-content-center">
     <div class="col-md-8">
       <form id="signupForm" >
-          <div class="text-center">
-              <a href="?action=pageAcceuil" class="h1">Sant&eacute;PourTous</a>
-          </div>
+
         <div class="step active" id="step1">
           <h2>Informations personnelles</h2>
           <div class="form-group">
@@ -51,7 +49,7 @@
             </div>
           </div>
           <div>
-            <p style="text-align: right;">Déja inscrit? <a href="?action=pageConnexionPatient">Se connecter</a></p>
+            <p style="text-align: right;">Already have an account? <a href="connexionPatient.html">Se connecter</a></p>
           </div>
           <button type="button" class="btn btn-primary" onclick="nextStep(1)">Suivant</button>
         </div>
@@ -117,7 +115,7 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="assets/js/pageInscription.js"> </script>
+<script src="../js/pageInscription.js"> </script>
 
 </body>
 </html>

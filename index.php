@@ -6,7 +6,7 @@
     // *****************************************************************************************
 
 	// Définition d'une constante pour les chemins absolus pour les hyperliens en HTML
-	define("DOSSIER_BASE_LIENS", "");
+	define("DOSSIER_BASE_LIENS", "/dashboard/SantePourTous/");
 	// Définition d'une constante pour les inclusions en PHP
 	$chemin=(substr($_SERVER['DOCUMENT_ROOT'],-1)=="/")?$_SERVER['DOCUMENT_ROOT']:$_SERVER['DOCUMENT_ROOT']."/";
 	define("DOSSIER_BASE_INCLUDE", $chemin."dashboard/SantePourTous/");

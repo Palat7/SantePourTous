@@ -14,6 +14,7 @@
 		public function __construct() {
 			parent::__construct();
 		}
+		
 
 		// ******************* Méthode exécuter action
 		public function executerAction() {
@@ -22,8 +23,10 @@
 			//----------------------------- INTERACTION BD (pas besoin ici) -------------------------------			
 			//----------------------------- RETOURNER LE NOM DE LA VUE À APPELER -----
 			//return "pageAccueilClinique1";
-            return "pageAcceuil";
+            return "pageSeConnecter";
 		}
+
+
 		
 	}	
 	

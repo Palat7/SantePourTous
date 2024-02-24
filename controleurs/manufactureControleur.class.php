@@ -11,9 +11,10 @@ include_once(DOSSIER_BASE_INCLUDE . "controleurs/inscriptionPatient.class.php");
 include_once(DOSSIER_BASE_INCLUDE . "controleurs/inscriptionMedecin.class.php");
 include_once(DOSSIER_BASE_INCLUDE . "controleurs/inscriptionClinique.class.php");
 include_once(DOSSIER_BASE_INCLUDE . "controleurs/connexionMedecin.class.php");
-//	include_once(DOSSIER_BASE_INCLUDE."controleurs/seConnecter.class.php");
-//	include_once(DOSSIER_BASE_INCLUDE."controleurs/seDeconnecter.class.php");
+include_once(DOSSIER_BASE_INCLUDE . "controleurs/SeConnecterClinique.class.php");
+include_once(DOSSIER_BASE_INCLUDE . "controleurs/SeDeconnecterClinique.class.php");
 include_once(DOSSIER_BASE_INCLUDE . "controleurs/creationCompte.class.php");
+include_once(DOSSIER_BASE_INCLUDE . "controleurs/voirMedecinClinique.class.php");
 
 class ManufactureControleur
 {
@@ -37,12 +38,24 @@ class ManufactureControleur
             case "pageInscriptionPatient":
                 $controleur = new InscriptionPatient();
                 break;
-                case "pageInscriptionMedecin":
+            case "pageInscriptionMedecin":
                 $controleur = new InscriptionMedecin();
                 break;
-                case "pageInscriptionClinique":
+            case "pageInscriptionClinique":
                 $controleur = new InscriptionClinique();
                 break;
+
+            case "voirMedecinClinique":
+                $controleur = new voirMedecinClinique();
+                break;
+            case "seConnecterClinique":
+                $controleur = new SeConnecterClinique();
+                break;
+
+            case "seDeconnecterClinique":
+                $controleur = new SeDeconnecterClinique();
+                break;
+
             case "pageAcceuil":
             default:
                 $controleur = new Defaut();

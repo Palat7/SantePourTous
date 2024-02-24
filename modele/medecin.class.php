@@ -13,6 +13,7 @@ class Medecin{
     private $medecin_idAdresse;
     private $medecin_idUtilisateur;
 
+    /*
     /**
      * @param $nomMedecin
      * @param $prenomMedecin

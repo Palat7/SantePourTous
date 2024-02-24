@@ -4,10 +4,11 @@ class Utilisateur
 {
     private $idUtilisateur;
 
-    private $firstLogin = true;
+    // private $firstLogin = true;
+    private $firstLogin;
     private $password;
     private $username;
-    private $typeUtilisateur;
+    //  private $typeUtilisateur;
 
     /*
     public function __construct($username, $password)
@@ -17,11 +18,29 @@ class Utilisateur
     }
 */
 
-    public function __construct($username, $password, $typeUtilisateur)
+    /*
+        public function __construct($idUtilisateur, $firstLogin, $username, $password)
+        {
+            $this->username = $username;
+            $this->password = $password;
+
+            //  $this->typeUtilisateur = $typeUtilisateur;
+            $this->idUtilisateur = $idUtilisateur;
+            $this->$firstLogin = $firstLogin;
+        }
+    */
+
+
+    public function __construct( $username, $password)
     {
         $this->username = $username;
         $this->password = $password;
-        $this->typeUtilisateur = $typeUtilisateur;
+
+        //  $this->typeUtilisateur = $typeUtilisateur;
+        /*
+       $this->idUtilisateur = $idUtilisateur;
+        $this->$firstLogin = $firstLogin;
+        */
     }
 
     /**
@@ -75,6 +94,12 @@ class Utilisateur
 
     public function __toString(){
         return "Nom d'utilisateur: " . $this->username . ", Mot de passe: " . $this->password . ", Type d'utilisateur: " . $this->typeUtilisateur;
+    }
+
+    public function  verifierMotPasse($motPassefourni){
+
+        return $this->password === $motPassefourni;
+
     }
 
 }

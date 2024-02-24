@@ -5,6 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="<?php echo DOSSIER_BASE_LIENS;?>assets/css/styleRetouche.css" />
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -26,11 +27,9 @@
     <link rel="stylesheet" href="../CSS/styleRetouche.css">
 
 -->
-    <link rel="stylesheet" href="<?php echo DOSSIER_BASE_LIENS;?>../css/styleRetouche.css" />
 
-    <!--
-    <link rel="stylesheet" href="<?php echo DOSSIER_BASE_LIENS;?>CSS/styleRetouche.css"/>
--->
+
+
     <title>Accueil Clinique</title>
 </head>
 
@@ -41,7 +40,7 @@
     <div class="container-fluid">
 
         <a class="navbar-brand fw-bold" href="#">
-            <img src="../Logo/Logo4.png" alt="SantéPourTous Logo"> </a>
+            <img src="<?php echo DOSSIER_BASE_LIENS;?>assets/images/Logo4.png" alt="SantéPourTous Logo"> </a>
         <a class="navbar-brand fw-bold textLogo me-5" href="#">SantéPourTous</a>
 
         <!-- Déterminer nécessité de ce bouton -->
@@ -78,8 +77,13 @@
                 <!--me-5 inclus pour ajouter de l'espace à droite de l'élément-->
                 <li class="nav-item me-5">
 
-                    <a class="nav-link " href="ListeMedecin.html">Liste des médecins</a>
+
+                <li class="nav-item me-5">
+                    <a class="nav-link primary" href="?action=voirMedecinClinique">
+                        Liste des médecins
+                    </a>
                 </li>
+
 
 
                 <li class="nav-item">
@@ -90,8 +94,20 @@
             <!--Classe ms-auto ajoutée ici. Elle place l'élément à droite dans une disposition de langue qui va de gauche à droite -->
             <ul class="navbar-nav ml-auto ms-auto ">
                 <li class="nav-item ">
+<!--
+                    <button class="btn btn-primary ms-5 btn-lg" type="submit">Deconnexion</button>  -->
 
-                    <button class="btn btn-primary ms-5 btn-lg" type="submit">Deconnexion</button>
+                    <form method="post" action="?action=seDeconnecterClinique">
+
+
+                        <button class="btn btn-primary ms-5 btn-lg" name="deconnexion" type="submit">
+
+                            Deconnexion
+                        </button>
+
+
+                    </form>
+
                 </li>
 
 
@@ -105,10 +121,17 @@
 </nav>
 
 
+
 <div class="container-fluid ">
 
+
+
     <div class="container-fluid p-0">
+
+
         <div class="row">
+
+
             <div class="col-2 p-0 ">
 
                 <!--Classe flex column ajouter pour avoir les boutons dans un seul bloc -->
@@ -119,6 +142,10 @@
                 <div class="nav flex-column nav-pills me-3 stylePersoBarreVerticale" id="v-pills-tab" role="tablist"
                      aria-orientation="vertical">
 
+                    <div class="text-center mt-3">
+                        <h5 class="welcome-text  text-white mb-3 ">
+                        <?php echo 'Bienvenu '.$_SESSION['utilisateurConnecte'] ?></h5>
+                    </div>
 
                     <!--  onglet notification et message enlevés au niveau de la page d'accueil de la clinique -->
 

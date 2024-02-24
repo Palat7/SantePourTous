@@ -1,7 +1,7 @@
 <?php
 
 if (defined('DOSSIER_BASE_INCLUDE')) {
-    include_once DOSSIER_BASE_INCLUDE."models/utilisateur.class.php";
+    include_once DOSSIER_BASE_INCLUDE."modele/utilisateur.class.php";
 } else {
     include_once "utilisateur.class.php";
 }
@@ -28,9 +28,9 @@ class Patient
      * @param $sexePatient
      * @param $courrielPatient
      */
-    public function __construct($nomPatient, $prenomPatient, $ramqPatient, $numSequence, $dateNaissance, $sexePatient, $courrielPatient)
+    public function __construct($idPatient, $nomPatient, $prenomPatient, $ramqPatient, $numSequence, $dateNaissance, $sexePatient, $courrielPatient)
     {
-
+        $this->idPatient = $idPatient;
         $this->nomPatient = $nomPatient;
         $this->prenomPatient = $prenomPatient;
         $this->ramqPatient = $ramqPatient;

@@ -1,12 +1,13 @@
 <?php
 
-if(defined('DOSSIER_BASE_INCLUDE')){
-    include_once DOSSIER_BASE_INCLUDE."models/DAO/DAO.interface.php";
-    include_once DOSSIER_BASE_INCLUDE . "models/patient.class.php";
-} else{
+if (defined('DOSSIER_BASE_INCLUDE')) {
+    include_once DOSSIER_BASE_INCLUDE . "modele/DAO/DAO.interface.php";
+    include_once DOSSIER_BASE_INCLUDE . "modele/patient.class.php";
+} else {
     include_once "DAO.interface.php";
     include_once "../patient.class.php";
 }
+
 class patientDAO implements DAO
 {
 
@@ -18,14 +19,14 @@ class patientDAO implements DAO
             throw new Exception("Impossible d'obtenir la connexion à la BD.");
         }
 
-        $unUtilisateur = null;
+        $unPatient = null;
 
-        $requete = $connexion->prepare("SELECT * FROM patient WHERE idPatient = ?");
+        $requete = $connexion->prepare("SELECT * FROM patient WHERE patient_idUtilisateur = ?");
         $requete->execute(array($id));
 
         if ($requete->rowCount() != 0) {
             $enr = $requete->fetch();
-            $unPatient = new Patient($enr['idPatient'], $enr['$nomPatient'], $enr['prenomPatient'], $enr['ramqPatient'], $enr['numSequence'], $enr['dateNaissance'], $enr['sexePatient'], $enr['courrielPatient']);
+            $unPatient = new Patient($enr['idPatient'], $enr['nomPatient'], $enr['prenomPatient'], $enr['ramqPatient'], $enr['numSequence'], $enr['dateNaissance'], $enr['sexePatient'], $enr['courrielPatient']);
         }
 
         $requete->closeCursor();
@@ -54,7 +55,7 @@ class patientDAO implements DAO
         $requete->execute();
 
         foreach ($requete as $enr) {
-            $unPatient = new Patient($enr['$nomPatient'], $enr['prenomPatient'], $enr['ramqPatient'], $enr['numSequence'], $enr['dateNaissance'], $enr['sexePatient'], $enr['courrielPatient']);
+            $unPatient = new Patient($enr['nomPatient'], $enr['prenomPatient'], $enr['ramqPatient'], $enr['numSequence'], $enr['dateNaissance'], $enr['sexePatient'], $enr['courrielPatient']);
             array_push($tableau, $unPatient);
         }
 
@@ -71,8 +72,8 @@ class patientDAO implements DAO
         } catch (Exception $e) {
             throw new Exception("Impossible de se connecter a la BD.");
         }
-        $requete=$connexion->prepare("INSERT INTO patient () value (?,?,?,?,?,?)");
-        $tableauInfosPat=[$unPatient->getNomPatient(), $unPatient->getPrenomPatient(),$unPatient->getRamqPatient(), $unPatient->getNumSequence(), $unPatient->getDateNaissance(), $unPatient->getSexePatient(), $unPatient->CourrielPatient()];
+        $requete = $connexion->prepare("INSERT INTO patient () value (?,?,?,?,?,?)");
+        $tableauInfosPat = [$unPatient->getNomPatient(), $unPatient->getPrenomPatient(), $unPatient->getRamqPatient(), $unPatient->getNumSequence(), $unPatient->getDateNaissance(), $unPatient->getSexePatient(), $unPatient->CourrielPatient()];
         return $requete->execute($tableauInfosPat);
     }
 
@@ -85,7 +86,7 @@ class patientDAO implements DAO
         }
 
         $requete = $connexion->prepare("UPDATE patient SET password=? WHERE nomPatient=?");
-        $tableauInfos = array($unPatient->getNomPatient(), $unPatient->getPrenomPatient(),$unPatient->getRamqPatient(), $unPatient->getNumSequence(), $unPatient->getDateNaissance(), $unPatient->getSexePatient(), $unPatient->CourrielPatient());
+        $tableauInfos = array($unPatient->getNomPatient(), $unPatient->getPrenomPatient(), $unPatient->getRamqPatient(), $unPatient->getNumSequence(), $unPatient->getDateNaissance(), $unPatient->getSexePatient(), $unPatient->CourrielPatient());
         return $requete->execute($tableauInfos);
     }
 

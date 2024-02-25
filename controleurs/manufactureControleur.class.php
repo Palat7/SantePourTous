@@ -19,6 +19,7 @@ include_once(DOSSIER_BASE_INCLUDE . "controleurs/creationClinique.class.php");
 include_once(DOSSIER_BASE_INCLUDE . "controleurs/TraitementCreationClinique.php");
 
 
+
 class ManufactureControleur
 {
     //  Méthode qui crée une instance du controleur associé à l'action
@@ -46,6 +47,9 @@ class ManufactureControleur
                 break;
             case "pageInscriptionClinique":
                 $controleur = new InscriptionClinique();
+                break;
+            case "pageAcceuilPatient":
+                $controleur = new AcceuilPatient();
                 break;
 
             case "voirMedecinClinique":

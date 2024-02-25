@@ -9,6 +9,7 @@
 	include_once(DOSSIER_BASE_INCLUDE."controleurs/controleur.abstract.class.php");
 	include_once(DOSSIER_BASE_INCLUDE."modele/DAO/utilisateurDAO.class.php");
 
+
 	class SeDeconnecterClinique extends  Controleur {
 		
 		// ******************* Constructeur vide

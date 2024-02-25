@@ -1,7 +1,10 @@
-<?php
+<!--<?php
 
-$patient = $_SESSION['utilisateurConnecte']['patient'];
-?>
+//$patient = $_SESSION['utilisateurConnecte']['patient'];
+
+$patient = $_SESSION['utilisateurConnecte'];
+
+?>-->
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -51,7 +54,7 @@ $patient = $_SESSION['utilisateurConnecte']['patient'];
                        aria-expanded="false"> Gestion des rendez-vous
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="prendRdv.html">Prendre un rendez-vous</a></li>
+                        <li><a class="dropdown-item" href="controleurs/PriseDeRendezVous.php">Prendre un rendez-vous</a></li>
                         <li><a class="dropdown-item" href="modifRdv.html">Modifier un rendez-vous</a></li>
                         <li><a class="dropdown-item" href="annulRdv.html">Annuler un rendez-vous</a></li>
                         <li><a class="dropdown-item" href="consultRdv.html">Consulter vos rendez-vous</a></li>
@@ -105,8 +108,8 @@ $patient = $_SESSION['utilisateurConnecte']['patient'];
                      aria-orientation="vertical">
                     <div class="text-center mt-3">
                         <h5 class="welcome-text  text-white mb-3 ">
-                            <?php echo 'Bienvenue '.$patient->getPrenomPatient() ?></h5>
-                    </div>
+
+                        Bonjour Patient</h5>                    </div>
                     <button class="nav-link  text-start text-white  border" id="v-pills-notification-tab"
 
                             data-bs-toggle="pill"

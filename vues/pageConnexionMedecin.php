@@ -27,7 +27,7 @@
         <h1><a href="?action=pageAcceuil">Sant&eacute;PourTous</a></h1>
     </div>
     <h2>Veuillez vous connecter</h2>
-    <form>
+    <form >
         <div class="form-control">
             <input type="text" required placeholder="Nom d'utilisateur">
         </div>

@@ -1,8 +1,8 @@
 <?php
 
 if(defined('DOSSIER_BASE_INCLUDE')){
-    include_once DOSSIER_BASE_INCLUDE."models/DAO/DAO.interface.php";
-    include_once DOSSIER_BASE_INCLUDE . "models/medecin.class.php";
+    include_once DOSSIER_BASE_INCLUDE."modele/DAO/DAO.interface.php";
+    include_once DOSSIER_BASE_INCLUDE . "modele/medecin.class.php";
 } else{
     include_once "DAO.interface.php";
     include_once "../medecin.class.php";

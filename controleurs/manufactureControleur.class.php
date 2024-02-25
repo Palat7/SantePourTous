@@ -69,6 +69,7 @@ class ManufactureControleur
             case "pageCreationClinique":
                 $controleur = new CreationClinique();
                 break;
+
             case "pageAcceuilMedecin":
                 $controleur = new AcceuilMedecin();
                 break;

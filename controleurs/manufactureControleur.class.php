@@ -15,6 +15,9 @@ include_once(DOSSIER_BASE_INCLUDE . "controleurs/SeConnecterClinique.class.php")
 include_once(DOSSIER_BASE_INCLUDE . "controleurs/SeDeconnecterClinique.class.php");
 include_once(DOSSIER_BASE_INCLUDE . "controleurs/creationCompte.class.php");
 include_once(DOSSIER_BASE_INCLUDE . "controleurs/voirMedecinClinique.class.php");
+include_once(DOSSIER_BASE_INCLUDE . "controleurs/creationClinique.class.php");
+include_once(DOSSIER_BASE_INCLUDE . "controleurs/TraitementCreationClinique.php");
+
 
 class ManufactureControleur
 {
@@ -55,6 +58,15 @@ class ManufactureControleur
             case "seDeconnecterClinique":
                 $controleur = new SeDeconnecterClinique();
                 break;
+
+            case "TraitementCreationClinique":
+                $controleur = new TraitementCreationClinique();
+                break;
+            case "pageCreationClinique":
+                $controleur = new CreationClinique();
+                break;
+
+
 
             case "pageAcceuil":
             default:

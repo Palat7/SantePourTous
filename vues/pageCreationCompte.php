@@ -19,7 +19,7 @@
     <div class="user-type-container">
         <a href="?action=pageInscriptionPatient" class="user-type">Patient </a>
         <a href="?action=pageInscriptionMedecin" class="user-type">Medecin </a>
-        <a href="?action=pageInscriptionClinique" class="user-type">Clinique</a>
+        <a href="?action=pageCreationClinique" class="user-type">Clinique</a>
     </div>
 
 </section>

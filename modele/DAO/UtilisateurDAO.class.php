@@ -68,6 +68,7 @@ class UtilisateurDAO implements DAO
         return $tableau;
     }
 
+
     public static function inserer($unUtilisateur)
     {
         try{
@@ -78,8 +79,8 @@ class UtilisateurDAO implements DAO
 
 
         //Constructeur à ajuster
-        $requete = $connexion->prepare("INSERT INTO utilisateur (username, password, typeUtilisateur) VALUE (?, ?, ?) ");
-        $tableauInfos = array($unUtilisateur->getPassword(),$unUtilisateur->getUsername(), $unUtilisateur->getTypeUtilisateur());
+        $requete = $connexion->prepare("INSERT INTO utilisateur (username, password) VALUE (?, ?, ?) ");
+        $tableauInfos = array($unUtilisateur->getUsername(), $unUtilisateur->getPassword());
         return $requete->execute($tableauInfos);
     }
 

@@ -28,3 +28,5 @@
 	// inclure la bonne vue
 	include_once(DOSSIER_BASE_INCLUDE."vues/".$nomVue.".php");
 ?>
+
+

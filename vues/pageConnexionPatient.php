@@ -16,11 +16,11 @@
     <h2>Veuillez vous connecter</h2>
     <form action="" method="post">
         <div class="form-control">
-            <input type="text" required placeholder="Nom d'utilisateur">
+            <input type="text" required placeholder="Nom d'utilisateur" name="utilisateur" id="utilisateur">
 
         </div>
         <div class="form-control">
-            <input type="password" required placeholder="Mot de passe">
+            <input type="password" required placeholder="Mot de passe" name="password" id="password">
 
         </div>
         <button class="btn">Connexion</button>

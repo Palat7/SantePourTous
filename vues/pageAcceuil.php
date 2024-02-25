@@ -29,7 +29,7 @@
                     <div class="dropdown-content">
                         <a href='?action=pageConnexionPatient'>Patient</a>
                         <a href="?action=pageConnexionMedecin">Medecin</a>
-                        <!--Ajouté le 2024-02-23 -->
+
 
                         <a href="?action=seConnecterClinique">Clinique</a>
                     </div>

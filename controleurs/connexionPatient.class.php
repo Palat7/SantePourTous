@@ -21,29 +21,35 @@ class ConnexionPatient extends Controleur
     }
 
     // ******************* Méthode exécuter action
-    public function executerAction():string
-    {
+      public function executerAction():string
+      {
 
-        if (isset($_POST['utilisateur']) && isset($_POST['password'])) {
-            $unUtilisateur = UtilisateurDAO::chercher($_POST['utilisateur']);
+          if (isset($_POST['utilisateur']) && isset($_POST['password'])) {
+              $unUtilisateur = UtilisateurDAO::chercher($_POST['utilisateur']);
 
-            if (!is_null($unUtilisateur)) {
-                $unPatient = PatientDAO::chercher($unUtilisateur->getIdUtilisateur());
-                print_r($unPatient);
-                die;
+              if (!is_null($unUtilisateur)) {
+                  $unPatient = PatientDAO::chercher($unUtilisateur->getIdUtilisateur());
+                  print_r($unPatient);
+                  die;
 
-                if (!is_null($unPatient)) {
-                    $this->setActeur('utilisateur');
-                    session_start();
-                    $_SESSION['utilisateurConnecte']['connexion'] = $unUtilisateur;
-                    $_SESSION['utilisateurConnecte']['patient'] = $unPatient;
-
-                }
-            }
+                  if (!is_null($unPatient)) {
+                      $this->setActeur('utilisateur');
+                      session_start();
 
 
-            return "pageAcceuilPatient";
-        }
-        return "pageConnexionPatient";
-    }
+                      $_SESSION['utilisateurConnecte']['connexion'] = $unUtilisateur;
+                      $_SESSION['utilisateurConnecte']['patient'] = $unPatient;
+
+                  }
+              }
+
+
+              return "pageAcceuilPatient";
+          }
+          return "pageConnexionPatient";
+      }
+
+
+
+
 }

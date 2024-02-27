@@ -69,6 +69,10 @@ class ManufactureControleur
             case "pageCreationClinique":
                 $controleur = new CreationClinique();
                 break;
+<<<<<<<<< Temporary merge branch 1
+=========
+
+>>>>>>>>> Temporary merge branch 2
             case "pageAcceuilMedecin":
                 $controleur = new AcceuilMedecin();
                 break;

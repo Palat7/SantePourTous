@@ -1,10 +1,4 @@
-<!--<?php
 
-//$patient = $_SESSION['utilisateurConnecte']['patient'];
-
-$patient = $_SESSION['utilisateurConnecte'];
-
-?>-->
 <!DOCTYPE html>
 <html lang="fr">
 

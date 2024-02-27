@@ -1,8 +1,8 @@
-<!--<?php
+<?php
 
 $medecin = $_SESSION['utilisateurConnecte']['medecin'];
 
-?>-->
+?>
 <!DOCTYPE html>
 <html lang="fr">
 

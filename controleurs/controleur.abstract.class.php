@@ -18,6 +18,13 @@
 		
 		// ******************* Accesseurs 
 		public function getMessagesErreur() { return $this->messagesErreur; }
+
+        public function setActeur(string $acteur): void
+        {
+            $this->acteur = $acteur;
+        }
+
+
 		public function getActeur() { return $this->acteur; }
 
 		// ******************* Méthode abstraite executer action
